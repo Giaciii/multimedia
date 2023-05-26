@@ -10,11 +10,23 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    height: 50px;
     border: none;
+    background-color: white;
+}
+
+#header {
+    display: flex;
+}
+
+.menu_punkt {
+    color: black;
+    width: 20%;
+    text-align: center;
 }
 
 #titel {
-    color: white;
+    
 }
 
 .titel_hintergrund {
