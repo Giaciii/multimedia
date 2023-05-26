@@ -1,0 +1,35 @@
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Menü */
+
+#menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: none;
+}
+
+#titel {
+    color: white;
+}
+
+.titel_hintergrund {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.vorne {
+    position: absolute;
+    height: 1000px;
+    width: 100%;
+    top: 40%;
+    left: 0;
+    background-color: white;
+}
