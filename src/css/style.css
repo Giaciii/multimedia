@@ -13,20 +13,19 @@ body {
     height: 50px;
     border: none;
     background-color: white;
+    display: flex;
 }
 
 #header {
     display: flex;
+    width: 100%;
 }
 
 .menu_punkt {
     color: black;
     width: 20%;
     text-align: center;
-}
-
-#titel {
-    
+    align-self: center;
 }
 
 .titel_hintergrund {
