@@ -7,8 +7,9 @@
     <title>Home | Kieselstein</title>
 </head>
 <body>
-    <iframe src='/src/site/menue.html' id='menu'></iframe>
-    <img src='/src/img/1.png' class='titel_hintergrund'>
+    <div id="menu"></div>
+    <!--<iframe src='site/menue.html' id='menu'></iframe>-->
+    <img src='img/export1.jpg' class='titel_hintergrund'>
 
     <div class='vorne'>
         Scroll Up and Down this page to see the parallax scrolling effect.
@@ -16,5 +17,16 @@
         This div is just here to enable scrolling.
         Tip: Try to remove the background-attachment property to remove the scrolling effect.
     </div>
+<script>
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'site/menu.html', true);
+  xhr.onreadystatechange = function() {
+    if (this.readyState === 4 && this.status === 200) {
+      document.getElementById('menu').innerHTML = this.responseText;
+    }
+  };
+  xhr.send();
+</script>
+
 </body>
 </html>
