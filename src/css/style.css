@@ -108,3 +108,24 @@ a {
 .slider .next {
     right: 0;
 }
+
+/* Quadratische Bilder */
+
+.bild_home {
+    position: absolute;
+    top: 600px;
+    left: 0;
+    width: 100%;
+    display: flex;
+}
+
+.bild_umfasser {
+    width: 33%;
+    text-align: center;
+}
+
+.imgQu {
+    width: 400px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+}
