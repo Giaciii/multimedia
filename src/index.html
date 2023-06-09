@@ -1,77 +1,79 @@
 <!DOCTYPE html>
 <html lang='de'>
+
 <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-    <link rel='stylesheet' href='/src/css/style.css'>
-    <title>Home | Kieselstein</title>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel='stylesheet' href='/src/css/style.css'>
+  <title>Home | Kieselstein</title>
 </head>
+
 <body>
-    <div id="menu"></div>
-    <!--<iframe src='site/menue.html' id='menu'></iframe>-->
-    <!--<img src='img/export1.jpg' class='titel_hintergrund'>-->
+  <div id="menu"></div>
+  <!--<iframe src='site/menue.html' id='menu'></iframe>-->
+  <!--<img src='img/export1.jpg' class='titel_hintergrund'>-->
 
-    <div class="slider">
-      <div class="slide"><img src="img/1.jpg"></div>
-      <div class="slide"><img src="img/2.jpg"></div>
-      <div class="slide"><img src="img/3.jpg"></div>
-      <a class="prev">&#10094;</a>
-      <a class="next">&#10095;</a>
+  <div class="slider">
+    <div class="slide"><img src="img/1.jpg"></div>
+    <div class="slide"><img src="img/2.jpg"></div>
+    <div class="slide"><img src="img/3.jpg"></div>
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+  </div>
+
+  <div class='bild_home'>
+    <div class='bild_umfasser'>
+      <img class="imgQu" src="img/4.jpg">
     </div>
-    
-    <div class='bild_home'>
-      <div class='bild_umfasser'>
-        <img class="imgQu" src="img/4.jpg">
-      </div>
-      <div class='bild_umfasser'>
-        <img class="imgQu" src="img/5.jpg">
-      </div>
-      <div class='bild_umfasser'>
-        <img class="imgQu" src="img/6.jpg">
-      </div>
+    <div class='bild_umfasser'>
+      <img class="imgQu" src="img/5.jpg">
     </div>
-    
-<script>
-  let xhr = new XMLHttpRequest();
-  xhr.open('GET', 'site/menu.html', true);
-  xhr.onreadystatechange = function() {
-    if (this.readyState === 4 && this.status === 200) {
-      document.getElementById('menu').innerHTML = this.responseText;
+    <div class='bild_umfasser'>
+      <img class="imgQu" src="img/6.jpg">
+    </div>
+  </div>
+  <script>
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', 'site/menu.html', true);
+    xhr.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        document.getElementById('menu').innerHTML = this.responseText;
+      }
+    };
+    xhr.send();
+  </script>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
     }
-  };
-  xhr.send();
-</script>
-<script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
 
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
 
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("slide");
-    if (n > slides.length) { slideIndex = 1; }
-    if (n < 1) { slideIndex = slides.length; }
-    for (i = 0; i < slides.length; i++) {
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      if (n > slides.length) { slideIndex = 1; }
+      if (n < 1) { slideIndex = slides.length; }
+      for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
     }
-    slides[slideIndex-1].style.display = "block";
-  }
 
-  document.querySelector('.prev').addEventListener('click', function() {
-    plusSlides(-1);
-  });
+    document.querySelector('.prev').addEventListener('click', function () {
+      plusSlides(-1);
+    });
 
-  document.querySelector('.next').addEventListener('click', function() {
-    plusSlides(1);
-  });
-</script>
+    document.querySelector('.next').addEventListener('click', function () {
+      plusSlides(1);
+    });
+  </script>
 </body>
+
 </html>
