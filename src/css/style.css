@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
 body {
     overflow-x: hidden;
     width: 100%;
-    font-family: edelsans UltraLight, sans-serif;
-    font-weight: bold;
+    font-family: 'PT Sans Narrow', sans-serif;
     font-size: 20pt;
 }
 
@@ -33,6 +34,7 @@ body {
 
 #titel {
     width: 60%;
+    font-weight: bold;
 }
 
 /* BODY */
