@@ -6,11 +6,12 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
   <link rel='stylesheet' href='/src/css/style.css'>
+  <link rel="icon" type="image/x-icon" href="/src/img/favicon.svg">
   <title>Home | Kieselstein</title>
 </head>
 
 <body>
-  <div id="menu"></div>
+  <div id="menu_1"></div>
   <!--<iframe src='site/menue.html' id='menu'></iframe>-->
   <!--<img src='img/export1.jpg' class='titel_hintergrund'>-->
 
@@ -33,15 +34,24 @@
       <img class="imgQu" src="img/6.jpg">
     </div>
   </div>
+
+  <div id="menu_2"></div>
+
   <script>
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', 'site/menu.html', true);
-    xhr.onreadystatechange = function () {
-      if (this.readyState === 4 && this.status === 200) {
-        document.getElementById('menu').innerHTML = this.responseText;
-      }
-    };
-    xhr.send();
+    const sites = ['menu.html', 'footer.html'];
+    let header = 'menu.html';
+    let footer = 'footer.html';
+    for (let i = 0; i < sites.length; i++) {
+      let xhr = new XMLHttpRequest();
+      console.log(sites[i]);
+      xhr.open('GET', 'site/'+sites[i], true);
+      xhr.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+          document.getElementById('menu_' + (i+1)).innerHTML = this.responseText;
+        }
+      };
+      xhr.send();
+    }
   </script>
   <script>
     let slideIndex = 1;
