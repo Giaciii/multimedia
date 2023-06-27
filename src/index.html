@@ -9,7 +9,20 @@
   <link rel="icon" type="image/x-icon" href="/src/img/favicon.svg">
   <title>Home | Kieselstein</title>
 </head>
+<script>
+  function bilderHolen() {
+    for(let i = 0; i < arguments.length; i++) {
+      let img = new Image();
+      img.src = arguments[i];
+    }
+  }
 
+  bilderHolen(
+    'img/1.jpg',
+    'img/2.jpg',
+    'img/3.jpg'
+  );
+</script>
 <body>
   <div id="menu_1"></div>
   <!--<iframe src='site/menue.html' id='menu'></iframe>-->
