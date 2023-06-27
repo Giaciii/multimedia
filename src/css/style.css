@@ -157,3 +157,25 @@ a {
     width: 33%;
     text-align: center;
 }
+
+/* Vorhernacher */
+
+.bild_home_vn {
+    width: 100%;
+    display: flex;
+    padding-bottom: 50px;
+    border-radius: 5px;
+}
+
+.gallerie_bild_vn {
+    width: 50%;
+    text-align: center;
+}
+
+.gallerie_bild_vn:nth-child(2) {
+    margin-right: 5%;
+}
+
+.beer-slider {
+    border-radius: 5px;
+}
