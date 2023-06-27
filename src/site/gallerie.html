@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' href='/src/css/style.css'>
+  <link rel="stylesheet" href="https://unpkg.com/beerslider/dist/BeerSlider.css">
   <title>Gallerie | Kieselstein</title>
 </head>
 <body>
@@ -25,19 +26,37 @@
       <img class="imgQu" src="../img/8.jpg">
     </div>
     <div class='gallerie_bild'>
-      Kieselsteine sind eine faszinierende Naturerscheinung, die seit Jahrtausenden die Menschen begeistern. Ihre glatte Oberfläche und die vielfältigen Farben und Formen sorgen dafür, dass sie oft als Sammelobjekt oder zur Dekoration verwendet werden. Aber Kieselsteine haben auch eine tiefere Bedeutung und sind in vielen Kulturen und Religionen von besonderer Wichtigkeit.
-
-In der buddhistischen Tradition werden Kieselsteine oft als eine Allegorie für den Geist verwendet. Wie jeder Kieselstein unterschiedlich und einzigartig ist, so ist auch jeder Geist individuell. Doch während der äußere Charakter der Kieselsteine durch Wind, Wasser und Zeit geformt wird, kann auch der Geist durch Einflüsse von außen geprägt werden. Indem man sich auf einen Kieselstein konzentriert und ihn betrachtet, wird man daran erinnert, dass auch der Geist in dauernder Veränderung begriffen ist und dass es wichtig ist, ihn zu reinigen, zu stärken und zu formen.
-
-In der Kultur der Inuit haben Kieselsteine ebenfalls eine hohe Bedeutung. Viele legen diese Steine auf das Grab ihrer Verstorbenen, da sie glauben, dass die Steine die Seele des Toten in der Zwischenwelt begleiten. Kieselsteine werden auch als Geschenke ausgetauscht und sind ein Symbol für Liebe und Wärme.
-
-Auch in der modernen Welt haben Kieselsteine ihren Platz gefunden. Sie werden oft als Baustoffe verwendet, um weiche Landschaften und spitze Ecken zu glätten. Sie können auch in Wasserspielen verwendet werden, um den Fluss von Wasser zu regulieren und zu beruhigen. Kieselsteine sind auch ein beliebtes Medium für die bildende Kunst, und viele Künstler verwenden diese Steine in ihren Werken.
-
-Kieselsteine haben also nicht nur eine dekorative Funktion, sondern sind auch ein symbolisches und kulturelles Element mit einer tiefen Bedeutung. Ihre Schönheit und Einzigartigkeit erinnern uns daran, dass wir Teil einer natürlichen Welt sind und dass jede einzelne Person einzigartig ist und eine eigene Geschichte hat. 
+      Kieselsteine sind eine faszinierende Naturerscheinung, die seit Jahrtausenden die Menschen begeistern. 
+      Ihre glatte Oberfläche und die vielfältigen Farben und Formen sorgen dafür, dass sie oft als Sammelobjekt 
+      oder zur Dekoration verwendet werden. Aber Kieselsteine haben auch eine tiefere Bedeutung und sind in vielen 
+      Kulturen und Religionen von besonderer Wichtigkeit.
     </div>
   </div>
-  
+
+  <div class='bild_home_vn'>
+    <div class='gallerie_bild_vn'>
+      <div id="slider" class="beer-slider" data-beer-label="vorher">
+        <img src="../img/9.jpg" alt="" width="500px">
+        <div class="beer-reveal" data-beer-label="nachher">
+          <img src="../img/10.jpg" alt="" width="500px">
+        </div>
+      </div>
+    </div>
+    <div class='gallerie_bild_vn'>
+      In der buddhistischen Tradition werden Kieselsteine oft als eine Allegorie für den Geist verwendet. 
+      Wie jeder Kieselstein unterschiedlich und einzigartig ist, so ist auch jeder Geist individuell. 
+      Doch während der äußere Charakter der Kieselsteine durch Wind, Wasser und Zeit geformt wird, 
+      kann auch der Geist durch Einflüsse von außen geprägt werden. Indem man sich auf einen Kieselstein konzentriert und ihn betrachtet, 
+      wird man daran erinnert, dass auch der Geist in dauernder Veränderung begriffen ist und dass es wichtig ist, ihn zu reinigen, zu stärken und zu formen.
+    </div>
+  </div>
+
   <div id="menu_2"></div>
+
+  <script src="https://unpkg.com/beerslider/dist/BeerSlider.js"></script>
+  <script>
+    new BeerSlider(document.getElementById('slider'));
+  </script>
 
   <script>
     const sites = ['menu.html', 'footer.html'];
