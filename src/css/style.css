@@ -179,3 +179,18 @@ a {
 .beer-slider {
     border-radius: 5px;
 }
+
+/* GIF */
+
+.bild_home_gif {
+    width: 100%;
+    display: flex;
+    padding-bottom: 50px;
+}
+
+/* Galerie */
+
+.text {
+    display: flex;
+    align-items: center;
+}
