@@ -2,4 +2,4 @@
 
 ### Infos
 
-Das Tag `iframe` ist nicht für ein Element mit Verlinkung gut (z.B. für ein Headerelement).
+Das Tag `iframe` ist nicht für ein Element mit Verlinkung geeignet (z.B. für ein Headerelement).
