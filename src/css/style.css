@@ -153,7 +153,7 @@ a {
     border-radius: 5px;
 }
 
-.gallerie_bild {
+.galerie_bild {
     width: 33%;
     text-align: center;
 }
@@ -167,12 +167,12 @@ a {
     border-radius: 5px;
 }
 
-.gallerie_bild_vn {
+.galerie_bild_vn {
     width: 50%;
     text-align: center;
 }
 
-.gallerie_bild_vn:nth-child(2) {
+.galerie_bild_vn:nth-child(2) {
     margin-right: 5%;
 }
 
