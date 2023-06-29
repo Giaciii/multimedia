@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/js-image-zoom@0.4.1/js-image-zoom.js" type="application/javascript"></script>
+  <link rel='stylesheet' href='/src/css/style.css'>
+  <title>Shop | Kieselstein</title>
+</head>
+<body>
+  <div id="menu_1"></div>
+
+  <div class='sp_bild_home'>
+    <div class='bild_umfasser img-container' style="width: 400px;">
+      <img class="imgQu" src="../img/19.jpg">
+      <p>500'000 CHF <a href="kaufen.html">Kaufen</a></p>
+    </div>
+    <div class='bild_umfasser img-container' style="width: 400px;">
+      <img class="imgQu" src="../img/20gruen.jpg">
+      <p>100'000 CHF <a href="kaufen.html">Kaufen</a></p>
+    </div>
+    <div class='bild_umfasser img-container' style="width: 400px;">
+      <img class="imgQu" src="../img/20settigung.jpg">
+      <p>10'000 CHF <a href="kaufen.html">Kaufen</a></p>
+    </div>
+    <div class='bild_umfasser img-container' style="width: 400px;">
+      <img class="imgQu" src="../img/20stress.jpg">
+      <p>1'000'000 CHF <a href="kaufen.html">Kaufen</a></p>
+    </div>
+  </div>
+
+  <div id="menu_2"></div>
+
+  <script>
+    let options = {
+        width: 400,
+        zoomWidth: 500,
+        offset: {vertical: 0, horizontal: 10}
+    };
+
+    let imgContainers = document.getElementsByClassName("img-container");
+
+    for (let i = 0; i <imgContainers.length; i++) {
+      new ImageZoom(imgContainers[i], options);
+    }   
+  </script>
+
+  <script>
+    const sites = ['menu.html', 'footer.html'];
+    let header = 'menu.html';
+    let footer = 'footer.html';
+    for (let i = 0; i < sites.length; i++) {
+      let xhr = new XMLHttpRequest();
+      console.log(sites[i]);
+      xhr.open('GET', sites[i], true);
+      xhr.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+          document.getElementById('menu_' + (i+1)).innerHTML = this.responseText;
+        }
+      };
+      xhr.send();
+    }
+  </script>
+</body>
+</html>
