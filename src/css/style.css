@@ -258,3 +258,9 @@ a {
     width: 100%;
     padding-bottom: 50px;
 }
+
+.sp_text {
+    position: absolute;
+    padding-right: 20px;
+    margin-left: 30%;
+}
