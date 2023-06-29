@@ -249,3 +249,12 @@ a {
     color: white;
     border-bottom: 2px solid white;
 }
+
+/* Shop */
+
+.sp_bild_home {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 100%;
+    padding-bottom: 50px;
+}
