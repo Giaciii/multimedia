@@ -217,3 +217,35 @@ a {
     justify-content: center;
     align-items: center;
 }
+
+.ex {
+    box-shadow: 0 0 15px rgb(210, 178, 0);
+}
+
+.ex_textangebot {
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.abschnitt {
+    background-color: goldenrod;
+    height: 500px;
+    width: 100vw;
+    margin-top: 500px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0 40px 0 0;
+}
+
+.text_dahrstellen {
+    padding: 10px;
+}
+
+.ex_link {
+    color: white;
+    border-bottom: 2px solid white;
+}
