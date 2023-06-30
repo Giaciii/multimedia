@@ -3,9 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/src/css/style.css'>
   <title>Document</title>
 </head>
 <body>
-  Über Uns
+  <div id="menu_1"></div>
+  <div id="menu_2"></div>
+
+  <script>
+    const sites = ['menu.html', 'footer.html'];
+    let header = 'menu.html';
+    let footer = 'footer.html';
+    for (let i = 0; i < sites.length; i++) {
+      let xhr = new XMLHttpRequest();
+      console.log(sites[i]);
+      xhr.open('GET', sites[i], true);
+      xhr.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+          document.getElementById('menu_' + (i+1)).innerHTML = this.responseText;
+        }
+      };
+      xhr.send();
+    }
+  </script>
 </body>
 </html>
