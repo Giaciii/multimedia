@@ -264,3 +264,63 @@ a {
     padding-right: 20px;
     margin-left: 30%;
 }
+
+/* Kontakt */
+
+.kontakt_form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 40px 0px 0px 0px;
+}
+
+input {
+    padding: 5px;
+}
+
+.kontakt_btn {
+    margin-top: 5px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.kontakt_btn:hover {
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+}
+
+.kontakt_form_inner {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 4px black;
+    padding: 20px;
+}
+
+.kontakt_abschnitt {
+    height: 500px;
+    margin-top: 50px;
+    width: 100vw;
+    display: flex;
+    color: black;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0 40px 0 0;
+}
+
+/* Wir */
+
+.w_kontakt_abschnitt {
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.kontakt_bild {
+    margin-left: 40px;
+}
