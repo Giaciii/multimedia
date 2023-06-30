@@ -324,3 +324,25 @@ input {
 .kontakt_bild {
     margin-left: 40px;
 }
+
+/* Impressum */
+
+.imp_text_dahrstellen {
+    padding: 10px;
+}
+
+.imp_was {
+    font-weight: bold;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+}
+
+.imp_umfasser {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
