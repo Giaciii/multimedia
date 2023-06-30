@@ -19,9 +19,12 @@
       };
       emailjs.send("service_pnxuowq", "template_e4j0f17", templateParams)
     .then(function(response) {
-       console.log('SUCCESS!', response.status, response.text);
+      console.log('SUCCESS!', response.status, response.text);
+      document.getElementById('fullname').value = '';
+      document.getElementById('email_id').value = '';
+      document.getElementById('message').value = '';
     }, function(error) {
-       console.log('FAILED...', error);
+      console.log('FAILED...', error);
     });
    }
   </script>
@@ -30,15 +33,28 @@
 <body>
   <div id="menu_1"></div>
 
-  <label>Name</label>
-  <input type="text" name="fullname" id="fullname">
-  <label>Email</label>
-  <input type="email" name="email_id" id="email_id">
-  <label>Message</label>
-  <textarea name="message" id="message"></textarea>
-  <input type="submit" value="Send" onclick="SendMail()">
+  <div class="kontakt_form">
+    <div class="kontakt_form_inner">
+      <label>Name</label>
+      <input type="text" name="fullname" id="fullname" placeholder="Name" required>
+      <label>Email</label>
+      <input type="email" name="email_id" id="email_id" placeholder="E-Mail" required>
+      <label>Message</label>
+      <textarea type="text" name="message" id="message" placeholder="Nachricht" rows="15" cols="40" required></textarea>
+      <input type="submit" value="Senden" onclick="SendMail()" class="kontakt_btn">
+    </div>
+  </div>
+
+  <p class="kontakt_abschnitt rellax" data-rellax-speed="4">
+      Wir werden ihre Anfrage so schnell wie möglich bearbeiten.
+  </p>
 
   <div id="menu_2"></div>
+
+  <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+  <script>
+      let rellax = new Rellax('.rellax');
+  </script>
 
   <script>
     const sites = ['menu.html', 'footer.html'];
